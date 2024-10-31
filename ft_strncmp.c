@@ -6,11 +6,13 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 16:14:30 by hboutale          #+#    #+#             */
-/*   Updated: 2024/10/30 16:14:33 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:05:36 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(char *s1, char *s2, size_t n)
 {
 	unsigned int i;
 

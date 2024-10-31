@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 14:53:57 by hboutale          #+#    #+#             */
-/*   Updated: 2024/10/31 15:04:39 by hboutale         ###   ########.fr       */
+/*   Created: 2024/10/30 17:33:33 by hboutale          #+#    #+#             */
+/*   Updated: 2024/10/31 14:45:27 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+void	*ft_memchr(void *ptr, int c, size_t n)
 {
-	unsigned int dlen;
-	unsigned int slen;
-	unsigned int i;
-	unsigned int res;
+	unsigned char *str;
+	unsigned char ch;
+	int i;
 
-	res = 0;
+	str = ptr;
+	ch = c;
 	i = 0;
-	dlen = ft_strlen(dest);
-	slen = ft_strlen(src);
-	if (dlen >= size)
-		return (size + slen);
-	else
-		res = slen + dlen;
-	while (src[i] && dlen < size - 1)
+	while (i < n)
 	{
-		dest[dlen] = src[i];
-		dlen++;
+		if (str[i] == ch)
+			return (&str[i]);
 		i++;
 	}
-	dest[dlen] = '\0';
-	return (res);
+	return (0);
 }

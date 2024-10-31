@@ -6,13 +6,15 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:48:47 by hboutale          #+#    #+#             */
-/*   Updated: 2024/10/30 14:52:25 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:51:40 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
-	int	count;
+	int count;
 	unsigned int i;
 
 	count = 0;

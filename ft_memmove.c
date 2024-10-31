@@ -6,9 +6,11 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:09:56 by hboutale          #+#    #+#             */
-/*   Updated: 2024/10/30 14:41:38 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:47:39 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static void	*move_non_overlap(void *dest_ptr, void *src_ptr, int size)
 {
@@ -44,7 +46,7 @@ static void	*move_overlap(void *dest_ptr, void *src_ptr, int size)
 	return (dest_ptr);
 }
 
-void	*ft_memmove(void *dest_ptr, void *src_ptr, int size)
+void	*ft_memmove(void *dest_ptr, void *src_ptr, size_t size)
 {
 	if (dest_ptr > src_ptr)
 		return (move_overlap(dest_ptr, src_ptr, size));

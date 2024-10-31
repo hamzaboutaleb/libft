@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 14:53:57 by hboutale          #+#    #+#             */
-/*   Updated: 2024/10/31 15:04:39 by hboutale         ###   ########.fr       */
+/*   Created: 2024/10/31 12:03:47 by hboutale          #+#    #+#             */
+/*   Updated: 2024/10/31 13:59:48 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+int	ft_atoi(char *s)
 {
-	unsigned int dlen;
-	unsigned int slen;
-	unsigned int i;
-	unsigned int res;
+	int result;
+	int sign;
 
-	res = 0;
-	i = 0;
-	dlen = ft_strlen(dest);
-	slen = ft_strlen(src);
-	if (dlen >= size)
-		return (size + slen);
-	else
-		res = slen + dlen;
-	while (src[i] && dlen < size - 1)
+	result = 0;
+	sign = 1;
+	while (*s == ' ' || (*s >= '\t' && *s <= '\r'))
+		s++;
+	if (*s && (*s == '-' || *s == '+'))
 	{
-		dest[dlen] = src[i];
-		dlen++;
-		i++;
+		if (*s == '-')
+			sign *= -1;
+		s++;
 	}
-	dest[dlen] = '\0';
-	return (res);
+	while (*s && *s >= '0' && *s <= '9')
+	{
+		result = result * 10 + *s - '0';
+		s++;
+	}
+	return (result * sign);
 }
