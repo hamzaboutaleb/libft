@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:01:42 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 09:41:14 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/01 10:02:48 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,5 @@ char	*ft_strrchr(char *str, int c);
 char	ft_tolower(int c);
 char	ft_toupper(int c);
 void	*ft_calloc(size_t nelem, size_t elsize);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 #endif
