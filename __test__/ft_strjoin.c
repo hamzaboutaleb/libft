@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 10:02:33 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 10:41:41 by hboutale         ###   ########.fr       */
+/*   Created: 2024/11/01 10:51:41 by hboutale          #+#    #+#             */
+/*   Updated: 2024/11/01 10:55:58 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	main(void)
 {
-	size_t	s_len;
-	char	*result;
+	char *s1 = "hello";
+	char *s2 = " world";
+	char *result;
 
-	s_len = ft_strlen((char *)s);
-	if (start >= s_len || start + len > s_len)
-		return (NULL);
-	result = (char *)malloc(sizeof(char) * (len + 1));
-	if (!result)
-		return (NULL);
-	result = ft_memcpy(result, (char *)(s + start), len);
-	result[len] = '\0';
-	return (result);
+	result = ft_strjoin(s1, s2);
+	printf("result: %s\n", result);
 }
