@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_caloc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 14:00:07 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 09:27:14 by hboutale         ###   ########.fr       */
+/*   Created: 2024/11/01 09:34:46 by hboutale          #+#    #+#             */
+/*   Updated: 2024/11/01 09:41:05 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char *haystack, char *needle, size_t len)
+void	*ft_calloc(size_t nelem, size_t elsize)
 {
-	int i;
-	int j;
+	void *ptr;
+	char *byte;
+	size_t i;
 
-	if (*needle == '\0')
-		return (haystack);
+	if (nelem == 0 || elsize == 0)
+		return (NULL);
+
+	ptr = malloc(nelem * elsize);
+	if (!ptr)
+		return (NULL);
 	i = 0;
-	while (haystack[i] && i < len)
+	byte = (char *)ptr;
+	while (i < nelem * elsize)
 	{
-		j = 0;
-		while (haystack[i + j] && needle[j] && i + j < len)
-		{
-			if (haystack[i + j] && needle[j] != haystack[i + j])
-				break ;
-			j++;
-		}
-		if (needle[j] == '\0')
-			return (&haystack[i]);
+		byte[i] = 0;
 		i++;
 	}
-	return (NULL);
+	return (ptr);
 }

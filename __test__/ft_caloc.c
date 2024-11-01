@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_caloc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 14:00:07 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 09:27:14 by hboutale         ###   ########.fr       */
+/*   Created: 2024/11/01 09:41:01 by hboutale          #+#    #+#             */
+/*   Updated: 2024/11/01 09:43:53 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
 
-char	*ft_strnstr(char *haystack, char *needle, size_t len)
+int	main(void)
 {
+	char *ptr;
 	int i;
-	int j;
 
-	if (*needle == '\0')
-		return (haystack);
+	ptr = ft_calloc(10, 6);
 	i = 0;
-	while (haystack[i] && i < len)
+
+	while (i < 10 * 6)
 	{
-		j = 0;
-		while (haystack[i + j] && needle[j] && i + j < len)
-		{
-			if (haystack[i + j] && needle[j] != haystack[i + j])
-				break ;
-			j++;
-		}
-		if (needle[j] == '\0')
-			return (&haystack[i]);
+		printf("%d ", ptr[i]);
 		i++;
 	}
-	return (NULL);
 }

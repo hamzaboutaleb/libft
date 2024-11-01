@@ -6,13 +6,16 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:01:42 by hboutale          #+#    #+#             */
-/*   Updated: 2024/10/31 15:10:37 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/01 09:41:14 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stddef.h>
+# include <stdlib.h>
+
 int		ft_atoi(char *s);
 void	ft_bzero(void *ptr, size_t size);
 int		ft_isalnum(int c);
@@ -34,4 +37,5 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len);
 char	*ft_strrchr(char *str, int c);
 char	ft_tolower(int c);
 char	ft_toupper(int c);
-#endif	
+void	*ft_calloc(size_t nelem, size_t elsize);
+#endif
