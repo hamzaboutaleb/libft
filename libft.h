@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:01:42 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 12:56:12 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/01 14:17:26 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strdup(char *src);
+char	**ft_split(char *str, char c);
 #endif

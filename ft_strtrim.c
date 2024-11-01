@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:34:52 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 13:01:08 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/01 14:18:23 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = start_index(s1, set);
 	end = end_index(s1, set);
-	printf("start: %zu end: %zu\n", start, end);
 	i = 0;
 	if (start >= end)
 		return (ft_strdup(""));
