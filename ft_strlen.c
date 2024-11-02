@@ -6,13 +6,13 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:53:23 by hboutale          #+#    #+#             */
-/*   Updated: 2024/10/31 15:03:27 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/02 09:40:07 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t count;
 

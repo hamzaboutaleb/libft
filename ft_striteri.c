@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 10:38:42 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/02 09:40:41 by hboutale         ###   ########.fr       */
+/*   Created: 2024/11/02 09:49:25 by hboutale          #+#    #+#             */
+/*   Updated: 2024/11/02 09:52:43 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t s1_len;
-	size_t s2_len;
-	char *result;
+	size_t s_len;
+	size_t i;
 
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	result = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
-	if (!result)
-		return (NULL);
-	ft_memcpy(result, (char *)s1, s1_len);
-	ft_memcpy((char *)(result + s1_len), (char *)s2, s2_len);
-	result[s1_len + s2_len] = '\0';
-	return (result);
+	i = 0;
+	s_len = ft_strlen(s);
+	while (i < s_len)
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

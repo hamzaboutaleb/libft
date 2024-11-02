@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:01:42 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 14:17:26 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:27:22 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_atoi(char *s);
 void	ft_bzero(void *ptr, size_t size);
@@ -31,7 +32,7 @@ void	*ft_memset(void *ptr, int ch, size_t n);
 char	*ft_strchr(char *str, int c);
 size_t	ft_strlcat(char *dest, char *src, size_t size);
 size_t	ft_strlcpy(char *dest, char *src, size_t size);
-size_t	ft_strlen(char *s);
+size_t	ft_strlen(const char *s);
 int		ft_strncmp(char *s1, char *s2, size_t n);
 char	*ft_strnstr(char *haystack, char *needle, size_t len);
 char	*ft_strrchr(char *str, int c);
@@ -43,4 +44,11 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strdup(char *src);
 char	**ft_split(char *str, char c);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 #endif

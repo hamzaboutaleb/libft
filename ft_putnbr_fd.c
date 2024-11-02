@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 10:38:42 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/02 09:40:41 by hboutale         ###   ########.fr       */
+/*   Created: 2024/11/02 10:26:58 by hboutale          #+#    #+#             */
+/*   Updated: 2024/11/02 10:31:22 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+static void	ft_putnbr(int nb, int fd)
 {
-	size_t s1_len;
-	size_t s2_len;
-	char *result;
-
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	result = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
-	if (!result)
-		return (NULL);
-	ft_memcpy(result, (char *)s1, s1_len);
-	ft_memcpy((char *)(result + s1_len), (char *)s2, s2_len);
-	result[s1_len + s2_len] = '\0';
-	return (result);
+	if (nb == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (nb < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb = nb * -1;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10, fd);
+		ft_putnbr(nb % 10, fd);
+	}
+	else
+		ft_putchar_fd(nb + '0', fd);
+}
+void	ft_putnbr_fd(int n, int fd)
+{
+	ft_putnbr(n, fd);
 }
