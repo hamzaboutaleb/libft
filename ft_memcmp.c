@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:55:12 by hboutale          #+#    #+#             */
-/*   Updated: 2024/10/31 14:46:01 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 11:32:27 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(void *str1_ptr, void *str2_ptr, size_t n)
 {
 	unsigned char *str1;
 	unsigned char *str2;
-	int i;
+	size_t i;
 
 	i = 0;
 	str1 = str1_ptr;

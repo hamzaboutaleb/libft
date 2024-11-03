@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:00:07 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 09:27:14 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 11:33:17 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(char *haystack, char *needle, size_t len)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	if (*needle == '\0')
 		return (haystack);

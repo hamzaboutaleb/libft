@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:58:36 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/02 09:50:32 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 11:31:43 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	*ft_itoa(int n)
 	int negative;
 	char *str;
 
+	negative = 0;
 	len = int_len(n);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
