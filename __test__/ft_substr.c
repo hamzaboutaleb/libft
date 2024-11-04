@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 10:15:46 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 10:20:22 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:15:11 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ int	main(void)
 	printf("%s\n", ft_substr(s, 0, 5));
 	printf("%s\n", ft_substr(s, 4, 4));
 	printf("%s\n", ft_substr(s, 0, 10));
+	printf("%s\n", ft_substr("hola", 0, 18446744073709551615ull));
 }

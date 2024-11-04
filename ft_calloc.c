@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 09:53:34 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/04 10:03:01 by hboutale         ###   ########.fr       */
+/*   Created: 2024/11/01 09:34:46 by hboutale          #+#    #+#             */
+/*   Updated: 2024/11/04 09:36:25 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+void	*ft_calloc(size_t nelem, size_t elsize)
 {
-	int		slen;
-	char	*res;
-	int		i;
+	void	*ptr;
+	char	*byte;
+	size_t	i;
 
-	i = 0;
-	slen = ft_strlen(src);
-	res = (char *)malloc(slen + 1);
-	if (res == NULL)
+	ptr = malloc(nelem * elsize);
+	if (!ptr)
 		return (NULL);
-	while (src[i])
+	i = 0;
+	byte = (char *)ptr;
+	while (i < nelem * elsize)
 	{
-		res[i] = src[i];
+		byte[i] = 0;
 		i++;
 	}
-	res[i] = '\0';
-	return (res);
+	return (ptr);
 }

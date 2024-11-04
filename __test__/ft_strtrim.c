@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:52:07 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 13:01:45 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:58:17 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,5 @@ int	main(void)
 	char *set = "h";
 
 	printf("result: %s\n", ft_strtrim(s1, set));
+	printf("result: %s\n", ft_strtrim("", ""));
 }

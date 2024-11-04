@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 14:14:48 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/03 21:07:32 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:31:38 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static int	split_string(char **res, const char *str, char c)
 		if (start != i)
 		{
 			res[k] = make_string(str, start, i);
-			if (res == NULL)
+			if (!res[k])
 				return (k);
 			k++;
 		}

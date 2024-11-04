@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 09:53:34 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/04 10:03:01 by hboutale         ###   ########.fr       */
+/*   Created: 2024/11/04 09:56:50 by hboutale          #+#    #+#             */
+/*   Updated: 2024/11/04 09:59:50 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <ctype.h>
 
-char	*ft_strdup(char *src)
+int	main(void)
 {
-	int		slen;
-	char	*res;
-	int		i;
+	int	i;
 
 	i = 0;
-	slen = ft_strlen(src);
-	res = (char *)malloc(slen + 1);
-	if (res == NULL)
-		return (NULL);
-	while (src[i])
+	while (i < 0x100)
 	{
-		res[i] = src[i];
+		printf("%d  %c  %c\n", i, ft_toupper(i), toupper(i));
+		if (ft_toupper(i) != toupper(i))
+		{
+			printf("error %d  %d  %d\n", i, ft_toupper(i), toupper(i));
+		}
 		i++;
 	}
-	res[i] = '\0';
-	return (res);
 }

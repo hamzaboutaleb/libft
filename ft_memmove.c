@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:09:56 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/03 20:41:36 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 09:53:13 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ static void	*move_overlap(void *dest_ptr, void *src_ptr, int size)
 
 void	*ft_memmove(void *dest_ptr, void *src_ptr, size_t size)
 {
+	if (dest_ptr == NULL && src_ptr == NULL)
+		return (NULL);
 	if (dest_ptr > src_ptr)
 		return (move_overlap(dest_ptr, src_ptr, size));
 	else

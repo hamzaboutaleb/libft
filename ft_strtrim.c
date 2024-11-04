@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:34:52 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/03 20:44:13 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:58:26 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,12 @@ static size_t	end_index(char const *s1, char const *set)
 {
 	size_t	result;
 
+	if (ft_strlen(s1) == 0)
+		return (0);
 	result = ft_strlen(s1) - 1;
-	while (result >= 0 && has(s1[result], set))
+	while (has(s1[result], set) && result > 0)
 		result--;
-	return (result + 1);
+	return (result);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -54,15 +56,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	char	*result;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = start_index(s1, set);
 	end = end_index(s1, set);
 	i = 0;
-	if (start >= end)
+	if (start > end)
 		return (ft_strdup(""));
-	result = (char *)malloc(sizeof(char) * (end - start + 1));
-	if (!result)
-		return (NULL);
-	ft_memcpy(result, (char *)(s1 + start), (end - start));
-	result[end - start] = '\0';
+	result = ft_substr(s1, start, (end - start) + 1);
 	return (result);
 }

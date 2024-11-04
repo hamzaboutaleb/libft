@@ -19,4 +19,6 @@ fclean: clean
 
 re: fclean all
 
+bonus: $(NAME);
+
 .PHONY: all fclean clean re

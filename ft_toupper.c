@@ -6,13 +6,13 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:22:01 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/04 09:30:30 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:00:26 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (c - 'a' + 'A');
+		return (c - 32);
 	return (c);
 }

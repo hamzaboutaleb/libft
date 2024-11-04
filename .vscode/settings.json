@@ -6,6 +6,8 @@
 		"ctype.h": "c",
 		"stddef.h": "c",
 		"libft.h": "c",
-		"limits.h": "c"
-	}
+		"limits.h": "c",
+		"ft_lstadd_front.C": "cpp"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
 }

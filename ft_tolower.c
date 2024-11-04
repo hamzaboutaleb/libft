@@ -6,11 +6,11 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:24:09 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/04 09:30:46 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:00:30 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c - 'A' + 'a');

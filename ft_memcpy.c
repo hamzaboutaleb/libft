@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 13:20:42 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/03 21:13:08 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 09:47:20 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t size)
 	unsigned char	*dest_ptr;
 	unsigned char	*src_ptr;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	dest_ptr = (unsigned char *)dest;
 	src_ptr = (unsigned char *)src;
 	i = 0;
