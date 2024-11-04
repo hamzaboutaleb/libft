@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 09:34:46 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/04 09:36:25 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:19:45 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 	char	*byte;
 	size_t	i;
 
+	if (elsize && nelem > (size_t)-1 / elsize)
+		return (NULL);
 	ptr = malloc(nelem * elsize);
 	if (!ptr)
 		return (NULL);

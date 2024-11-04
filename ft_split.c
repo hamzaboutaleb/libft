@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 14:14:48 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/04 13:31:38 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:57:27 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,8 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	int		err_index;
 
+	if (!s)
+		return (NULL);
 	res = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (res == NULL)
 		return (NULL);

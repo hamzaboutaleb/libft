@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:33:33 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/03 21:10:23 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:49:09 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ void	*ft_memchr(void *ptr, int c, size_t n)
 			return (&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
