@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   strchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 13:05:56 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/03 20:41:04 by hboutale         ###   ########.fr       */
+/*   Created: 2024/11/03 21:17:37 by hboutale          #+#    #+#             */
+/*   Updated: 2024/11/03 21:27:52 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void	ft_bzero(void *ptr, size_t size)
+int	main(void)
 {
-	size_t			i;
-	unsigned char	*str;
-
-	str = ptr;
-	i = 0;
-	while (i < size)
-	{
-		str[i] = 0;
-		i++;
-	}
+	char s[] = "tripouille";
+	printf("%s", ft_strchr(s, 't' + 256));
+	printf("%s", strchr(s, 't' + 256));
 }

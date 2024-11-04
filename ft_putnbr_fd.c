@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 10:26:58 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/02 10:31:22 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 20:43:33 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ static void	ft_putnbr(int nb, int fd)
 	else
 		ft_putchar_fd(nb + '0', fd);
 }
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	ft_putnbr(n, fd);

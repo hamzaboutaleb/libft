@@ -6,13 +6,13 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 14:14:48 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 14:32:08 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 21:07:32 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(char *str, char ch)
+static int	count_words(const char *str, char ch)
 {
 	int	res;
 	int	i;
@@ -33,7 +33,7 @@ static int	count_words(char *str, char ch)
 	return (res);
 }
 
-static char	*make_string(char *str, int start, int end)
+static char	*make_string(const char *str, int start, int end)
 {
 	int		size;
 	char	*res;
@@ -53,7 +53,7 @@ static char	*make_string(char *str, int start, int end)
 	return (res);
 }
 
-static int	split_string(char **res, char *str, char c)
+static int	split_string(char **res, const char *str, char c)
 {
 	int	i;
 	int	k;
@@ -94,15 +94,15 @@ static void	*free_until(char **res, int end)
 	return (NULL);
 }
 
-char	**ft_split(char *str, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	int		err_index;
 
-	res = (char **)malloc(sizeof(char *) * (count_words(str, c) + 1));
+	res = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (res == NULL)
 		return (NULL);
-	err_index = split_string(res, str, c);
+	err_index = split_string(res, s, c);
 	if (err_index != -1)
 		return (free_until(res, err_index));
 	return (res);

@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 10:38:42 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/02 09:40:41 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 20:43:47 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t s1_len;
-	size_t s2_len;
-	char *result;
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*result;
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);

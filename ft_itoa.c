@@ -6,13 +6,11 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:58:36 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/03 11:31:43 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 20:52:08 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int	int_len(int n)
 {
@@ -30,6 +28,7 @@ static int	int_len(int n)
 	}
 	return (count);
 }
+
 static void	fill(char *str, int n, int len, int negative)
 {
 	int	k;
@@ -39,7 +38,9 @@ static void	fill(char *str, int n, int len, int negative)
 	while (n)
 	{
 		k = (n % 10);
-		str[len] = (k > 0 ? k : -k) + '0';
+		str[len] = -k + '0';
+		if (k > 0)
+			str[len] = k + '0';
 		n = n / 10;
 		len--;
 	}
@@ -47,10 +48,12 @@ static void	fill(char *str, int n, int len, int negative)
 
 char	*ft_itoa(int n)
 {
-	int len;
-	int negative;
-	char *str;
+	int		len;
+	int		negative;
+	char	*str;
 
+	if (n == 0)
+		return (ft_strdup("0"));
 	negative = 0;
 	len = int_len(n);
 	str = malloc(sizeof(char) * (len + 1));

@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 09:53:34 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/01 09:55:27 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 20:43:43 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(char *src)
 {
-	int slen;
-	char *res;
-	int i;
+	int		slen;
+	char	*res;
+	int		i;
 
 	i = 0;
 	slen = ft_strlen(src);

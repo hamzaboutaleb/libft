@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 13:05:56 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/03 20:41:04 by hboutale         ###   ########.fr       */
+/*   Created: 2024/11/03 20:01:50 by hboutale          #+#    #+#             */
+/*   Updated: 2024/11/03 20:08:38 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
 
-void	ft_bzero(void *ptr, size_t size)
+int	main(void)
 {
-	size_t			i;
-	unsigned char	*str;
+	int	result;
 
-	str = ptr;
-	i = 0;
-	while (i < size)
-	{
-		str[i] = 0;
-		i++;
-	}
+	result = ft_strncmp("test\200", "test\0", 5);
+	printf("result: %d\n", result);
 }

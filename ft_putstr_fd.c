@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 09:54:53 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/02 09:55:54 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 20:41:55 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t s_len;
+	size_t	s_len;
 
 	s_len = ft_strlen(s);
 	write(fd, s, s_len);

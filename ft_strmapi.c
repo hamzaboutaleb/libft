@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 09:37:02 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/02 09:48:06 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 20:43:56 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *result;
-	size_t s_len;
-	size_t i;
-	
+	char	*result;
+	size_t	s_len;
+	size_t	i;
+
 	i = 0;
 	s_len = ft_strlen(s);
 	result = malloc(sizeof(char) * (s_len + 1));

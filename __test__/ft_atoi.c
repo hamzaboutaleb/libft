@@ -6,13 +6,12 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:09:54 by hboutale          #+#    #+#             */
-/*   Updated: 2024/10/31 13:27:43 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 20:39:50 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 #include <stdio.h>
-
 #define RESET "\033[0m"
 #define GREEN "\033[32m"
 #define RED "\033[31m"

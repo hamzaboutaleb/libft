@@ -9,7 +9,7 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -crs $@ $(OBJ)
+	ar -crs $@ $^
 
 clean:
 	rm -f $(OBJ)

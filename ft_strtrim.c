@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:34:52 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/02 09:40:57 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 20:44:13 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ static size_t	start_index(char const *s1, char const *set)
 		result++;
 	return (result);
 }
+
 static size_t	end_index(char const *s1, char const *set)
 {
 	size_t	result;

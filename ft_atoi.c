@@ -6,14 +6,14 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:03:47 by hboutale          #+#    #+#             */
-/*   Updated: 2024/10/31 13:59:48 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 21:04:28 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *s)
+int	ft_atoi(const char *s)
 {
-	int result;
-	int sign;
+	int	result;
+	int	sign;
 
 	result = 0;
 	sign = 1;

@@ -6,7 +6,7 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:53:23 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/02 09:40:07 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/03 20:43:54 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t count;
+	size_t	count;
 
 	count = 0;
 	while (*s != '\0')
