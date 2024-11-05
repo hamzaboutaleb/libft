@@ -6,17 +6,17 @@
 /*   By: hboutale <hboutale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:09:56 by hboutale          #+#    #+#             */
-/*   Updated: 2024/11/04 17:54:02 by hboutale         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:32:08 by hboutale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*move_non_overlap(void *dest_ptr, void *src_ptr, int size)
+static void	*move_non_overlap(void *dest_ptr, const void *src_ptr, int size)
 {
-	unsigned char	*dest;
-	unsigned char	*src;
-	int				i;
+	unsigned char		*dest;
+	const unsigned char	*src;
+	int					i;
 
 	dest = dest_ptr;
 	src = src_ptr;
@@ -29,11 +29,11 @@ static void	*move_non_overlap(void *dest_ptr, void *src_ptr, int size)
 	return (dest_ptr);
 }
 
-static void	*move_overlap(void *dest_ptr, void *src_ptr, int size)
+static void	*move_overlap(void *dest_ptr, const void *src_ptr, int size)
 {
-	unsigned char	*dest;
-	unsigned char	*src;
-	int				i;
+	unsigned char		*dest;
+	const unsigned char	*src;
+	int					i;
 
 	dest = dest_ptr;
 	src = src_ptr;
@@ -46,7 +46,7 @@ static void	*move_overlap(void *dest_ptr, void *src_ptr, int size)
 	return (dest_ptr);
 }
 
-void	*ft_memmove(void *dest_ptr, void *src_ptr, size_t size)
+void	*ft_memmove(void *dest_ptr, const void *src_ptr, size_t size)
 {
 	if (dest_ptr == NULL && src_ptr == NULL)
 		return (NULL);
